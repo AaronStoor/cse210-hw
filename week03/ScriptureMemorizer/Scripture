@@ -1,0 +1,24 @@
+using System;
+
+public class Scripture
+{
+    private Reference _reference;
+    private list<string>  _words;
+
+    public Scripture(Reference Reference, string text)
+    {
+
+    }
+    public void HideRandomWords(int nuberToHide)
+    {
+
+    }
+    public string GetDisplayText()
+    {
+
+    }
+    public string IsCompleteHidden()
+    {
+
+    }
+}
