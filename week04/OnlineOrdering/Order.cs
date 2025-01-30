@@ -1,6 +1,6 @@
 using System;
 
-public class Order()
+public class Order
 {
     private List<Product> products;
     private Customer customer;
