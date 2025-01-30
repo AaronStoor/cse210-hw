@@ -2,28 +2,20 @@ using System;
 
 public class Comment
 {
-    private string commenterName;
-    private string text;
+    private string _commenterName;
+    private string _text;
 
     public Comment(string commenterName, string text)
     {
-        this.commenterName = commenterName;
-        this.text = text;
+        this._commenterName = commenterName;
+        this._text = text;
     }
     public string GetCommenterName()
     {
-        return commenterName;
-    }
-    public void SetCommenterName(string commenterName)
-    {
-        this.commenterName = commenterName;
+        return _commenterName;
     }
     public string GetText()
     {
-        return text;
-    }
-    public void SetText(string text)
-    {
-        this.text = text;
+        return _text;
     }
 }
