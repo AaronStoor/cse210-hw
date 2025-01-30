@@ -2,31 +2,31 @@ using System;
 
 public class Order
 {
-    private List<Product> products;
-    private Customer customer;
+    private List<Product> _products;
+    private Customer _customer;
 
     public Order(List<Product> products, Customer customer)
     {
-        this.products = products;
-        this.customer = customer;
+        this._products = products;
+        this._customer = customer;
     }
 
     public double TotalCost()
     {
         double productTotal = 0;
-        foreach (var product in products)
+        foreach (var product in _products)
         {
             productTotal += product.TotalCost();
         }
 
-        double shippingCost = customer.LivesInUSA() ? 5 : 35;
+        double shippingCost = _customer.LivesInUSA() ? 5 : 35;
         return productTotal + shippingCost;
     }
 
     public string PackingLabel()
     {
         string label = "";
-        foreach (var product in products)
+        foreach (var product in _products)
         {
             label += $"{product.Name} (ID: {product.ProductId})\n";
         }
@@ -35,6 +35,6 @@ public class Order
 
     public string ShippingLabel()
     {
-        return $"{customer.Name}\n{customer.Address.FullAddress()}";
+        return $"{_customer.Name}\n{_customer.Address.FullAddress()}";
     }
 }

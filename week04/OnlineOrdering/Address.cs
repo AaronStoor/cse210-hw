@@ -2,27 +2,27 @@ using System;
 
 public class Address
 {
-    private string streetAddress;
-    private string city;
-    private string stateOrProvince;
-    private string country;
+    private string _streetAddress;
+    private string _city;
+    private string _stateOrProvince;
+    private string _country;
 
     public Address(string streetAddress, string city, string stateOrProvince, string country)
     {
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.stateOrProvince = stateOrProvince;
-        this.country = country;
+        this._streetAddress = streetAddress;
+        this._city = city;
+        this._stateOrProvince = stateOrProvince;
+        this._country = country;
     }
 
     public bool IsInUSA()
     {
-        return country == "USA";
+        return _country == "USA";
     }
     public string FullAddress()
     {
-        return $"{streetAddress}\n{city}, {stateOrProvince}\n{country}";
+        return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{_country}";
     }
 
-    public string Country { get => country; }
+    public string Country { get => _country; }
 }

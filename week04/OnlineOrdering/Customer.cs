@@ -2,20 +2,20 @@ using System;
 
 public class Customer
 {
-    private string name;
-    private Address address;
+    private string _name;
+    private Address _address;
 
     public Customer(string name, Address address)
     {
-        this.name = name;
-        this.address = address;
+        this._name = name;
+        this._address = address;
     }
     
     public bool LivesInUSA()
     {
-        return address.IsInUSA();
+        return _address.IsInUSA();
     }
 
-    public string Name{ get => name; }
-    public Address Address { get => address; }
+    public string Name{ get => _name; }
+    public Address Address { get => _address; }
 }
